@@ -9,9 +9,14 @@ const BLACK_ROOK = preload("res://images/blackRook.png")
 const WHITE_BISHOP = preload("res://images/whiteBishop.png")
 const WHITE_HORSE = preload("res://images/whiteHorse.png")
 const WHITE_ROOK = preload("res://images/whiteRook.png")
+const BLACK_QUEEN = preload("res://images/blackQueen.png")
+const WHITE_QUEEN = preload("res://images/whiteQueen.png")
+const BLACK_KING = preload("res://images/blackKing.png")
+const WHITE_KING = preload("res://images/whiteKing.png")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	GameManager.tile_map = tile_map
+
 	var grid = tile_map.get_used_cells(0)
 	for i in grid:
 		if i.y == 1:
@@ -23,8 +28,10 @@ func _ready():
 			createPiece(BLACK_HORSE, i)
 		elif i.y == 0 && i.x in [2,5]:
 			createPiece(BLACK_BISHOP, i)
-		
-		
+		elif i.y == 0 && i.x == 4:
+			createPiece(BLACK_KING, i)
+		elif i.y == 0 && i.x == 3:
+			createPiece(BLACK_QUEEN, i)
 
 		elif i.y == 6:
 			createPiece(WHITEPAWN, i)
@@ -35,7 +42,11 @@ func _ready():
 		elif i.y == 7 && i.x in [2,5]:
 			createPiece(WHITE_BISHOP, i)
 			#GameManager.whitePieces.append(c)
-			
+		elif i.y == 7 && i.x == 4:
+			createPiece(WHITE_KING, i)
+		elif i.y == 7 && i.x == 3:
+			createPiece(WHITE_QUEEN, i)
+
 func createPiece(texture, location):
 	var c = PIECE.instantiate()
 	add_child(c)
