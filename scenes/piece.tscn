@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdigfk3h7tsx6"]
+[gd_scene load_steps=4 format=3 uid="uid://bdigfk3h7tsx6"]
 
 [ext_resource type="Texture2D" uid="uid://b625mo7t4klgl" path="res://images/pawn.png" id="1_l4fok"]
-[ext_resource type="Script" path="res://scripts/unitScript.gd" id="2_ue4g2"]
+[ext_resource type="Script" path="res://scripts/piece.gd" id="1_osqeo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sw2x"]
+size = Vector2(9, 9)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_osqeo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.19209e-07, -5.96046e-08)
 scale = Vector2(0.171875, 0.109375)
 texture = ExtResource("1_l4fok")
-script = ExtResource("2_ue4g2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_1sw2x")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

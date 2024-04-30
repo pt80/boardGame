@@ -2,3 +2,5 @@ res://scenes/board.tscn
 res://scripts/boardScript.gd
 res://scenes/pawn.tscn
 res://scenes/piece.tscn
+res://scripts/game_manager.gd
+res://scripts/piece.gd
