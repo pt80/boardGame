@@ -4,3 +4,6 @@
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
+
+[node name="TileMap" type="TileMap" parent="TileMap"]
+format = 2
