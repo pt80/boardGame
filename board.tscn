@@ -4,5 +4,3 @@
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap"]
