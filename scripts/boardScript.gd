@@ -46,11 +46,16 @@ func _ready():
 			createPiece(WHITE_KING, i)
 		elif i.y == 7 && i.x == 3:
 			createPiece(WHITE_QUEEN, i)
-
+		else:
+			var tile = tile_map.get_cell_tile_data(0,i)
+			tile.set_custom_data("occupied", false)
+			
 func createPiece(texture, location):
 	var c = PIECE.instantiate()
 	add_child(c)
 	c.get_node("Sprite2D").texture = texture
 	c.global_position = tile_map.map_to_local(location)
+	c.currentCell = location
 	var tile = tile_map.get_cell_tile_data(0,location)
-	tile.set_custom_data("occupied", true)
+	#tile.set_custom_data("occupied", true)
+

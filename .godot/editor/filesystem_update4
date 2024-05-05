@@ -4,3 +4,6 @@ res://scenes/pawn.tscn
 res://scenes/piece.tscn
 res://scripts/game_manager.gd
 res://scripts/piece.gd
+res://scenes/game_board.tscn
+res://scripts/grid.gd
+res://scenes/CharacterBody2D.gd
