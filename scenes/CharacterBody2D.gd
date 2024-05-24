@@ -12,5 +12,8 @@ func _input(event):
 		print(tile_map.currentTile)
 		if !tile_map.currentTile == null:
 			global_position = Vector2(tile_map.currentTile) + Vector2(-8,12)
+<<<<<<< HEAD
 			print('here')
 			asdfdfasd
+=======
+>>>>>>> parent of 18b192e (test)
