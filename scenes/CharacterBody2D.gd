@@ -13,4 +13,3 @@ func _input(event):
 		if !tile_map.currentTile == null:
 			global_position = Vector2(tile_map.currentTile) + Vector2(-8,12)
 			print('here')
-			asdfdfasd
