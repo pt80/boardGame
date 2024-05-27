@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cj4a6vfwhirvp"]
+[gd_scene load_steps=3 format=3 uid="uid://cj4a6vfwhirvp"]
 
 [ext_resource type="Script" path="res://scenes/mainMenu.gd" id="1_0c3f3"]
+[ext_resource type="Texture2D" uid="uid://bybsb2to22jbt" path="res://images/GH3SBvzacAElecm.jpg" id="2_ujx2g"]
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3
@@ -9,18 +10,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_0c3f3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ujx2g")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = -97.5
+offset_top = -56.5
 offset_right = 97.5
-offset_bottom = 113.0
+offset_bottom = 56.5
 grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Play" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
@@ -39,3 +53,5 @@ text = "Exit
 "
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

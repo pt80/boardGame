@@ -4,3 +4,4 @@ res://scripts/grid.gd
 res://scenes/statsUI.gd
 res://scenes/mainMenu.tscn
 res://scenes/mainMenu.gd
+res://scenes/characterSelect.tscn

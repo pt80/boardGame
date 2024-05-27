@@ -1,0 +1,248 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmafqghepc407"]
+
+[ext_resource type="Texture2D" uid="uid://bybsb2to22jbt" path="res://images/GH3SBvzacAElecm.jpg" id="1_26ryc"]
+[ext_resource type="Texture2D" uid="uid://bukp8g7xdqoa8" path="res://images/testUnit.png" id="2_3ptpw"]
+
+[node name="characterSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_26ryc")
+expand_mode = 1
+
+[node name="panelLeft" type="PanelContainer" parent="CanvasLayer"]
+offset_top = 181.5
+offset_right = 64.0
+offset_bottom = 181.5
+
+[node name="teamLeft" type="VBoxContainer" parent="CanvasLayer/panelLeft"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="unit1" type="VBoxContainer" parent="CanvasLayer/panelLeft/teamLeft"]
+layout_mode = 2
+
+[node name="unitName" type="Label" parent="CanvasLayer/panelLeft/teamLeft/unit1"]
+layout_mode = 2
+text = "Tammy
+"
+
+[node name="unitImage" type="TextureRect" parent="CanvasLayer/panelLeft/teamLeft/unit1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="unit2" type="VBoxContainer" parent="CanvasLayer/panelLeft/teamLeft"]
+layout_mode = 2
+
+[node name="unitName" type="Label" parent="CanvasLayer/panelLeft/teamLeft/unit2"]
+layout_mode = 2
+text = "Jessica"
+
+[node name="unitImage" type="TextureRect" parent="CanvasLayer/panelLeft/teamLeft/unit2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="unit3" type="VBoxContainer" parent="CanvasLayer/panelLeft/teamLeft"]
+layout_mode = 2
+
+[node name="unitName" type="Label" parent="CanvasLayer/panelLeft/teamLeft/unit3"]
+layout_mode = 2
+text = "linda"
+
+[node name="unitImage" type="TextureRect" parent="CanvasLayer/panelLeft/teamLeft/unit3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="panelRight" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -140.5
+offset_bottom = 140.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="teamRight" type="VBoxContainer" parent="CanvasLayer/panelRight"]
+layout_mode = 2
+
+[node name="unit1" type="VBoxContainer" parent="CanvasLayer/panelRight/teamRight"]
+layout_mode = 2
+
+[node name="unitName" type="Label" parent="CanvasLayer/panelRight/teamRight/unit1"]
+layout_mode = 2
+text = "Timmy"
+
+[node name="unitImage" type="TextureRect" parent="CanvasLayer/panelRight/teamRight/unit1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="unit2" type="VBoxContainer" parent="CanvasLayer/panelRight/teamRight"]
+layout_mode = 2
+
+[node name="unitName" type="Label" parent="CanvasLayer/panelRight/teamRight/unit2"]
+layout_mode = 2
+text = "Jessie"
+
+[node name="unitImage" type="TextureRect" parent="CanvasLayer/panelRight/teamRight/unit2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="unit3" type="VBoxContainer" parent="CanvasLayer/panelRight/teamRight"]
+layout_mode = 2
+
+[node name="unitName" type="Label" parent="CanvasLayer/panelRight/teamRight/unit3"]
+layout_mode = 2
+text = "Lennon"
+
+[node name="unitImage" type="TextureRect" parent="CanvasLayer/panelRight/teamRight/unit3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="characterSelect" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="TextureRect8" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="TextureRect9" type="TextureRect" parent="CanvasLayer/characterSelect"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_3ptpw")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -171.0
+offset_right = 168.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_3ptpw")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 30
+columns = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Hp:"
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Label3" type="Label" parent="CanvasLayer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "attack"
+
+[node name="Label4" type="Label" parent="CanvasLayer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Label5" type="Label" parent="CanvasLayer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "def"
+
+[node name="Label6" type="Label" parent="CanvasLayer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "1234"
+
+[node name="Label7" type="Label" parent="CanvasLayer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "mana"
+
+[node name="Label8" type="Label" parent="CanvasLayer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "123"
