@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://taijyu263ucn"]
+[gd_scene load_steps=12 format=3 uid="uid://taijyu263ucn"]
 
 [ext_resource type="Texture2D" uid="uid://cclp4rdrb6m5u" path="res://images/bw.png" id="1_bnnrx"]
 [ext_resource type="Texture2D" uid="uid://nwtpx3bkp5lg" path="res://images/5/MCBlocksBlackOutline.png" id="2_6terr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0rrmt2xuscg8" path="res://images/5/MCBlocksColorOutline.png" id="3_yhmfb"]
 [ext_resource type="Script" path="res://scenes/CharacterBody2D.gd" id="5_hkkkc"]
 [ext_resource type="Texture2D" uid="uid://c3ttk0l7n600t" path="res://images/blackBishop.png" id="5_vmcct"]
+[ext_resource type="Script" path="res://scenes/statsUI.gd" id="7_qdivg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bwaj"]
 texture = ExtResource("1_bnnrx")
@@ -243,3 +244,72 @@ script = ExtResource("5_hkkkc")
 position = Vector2(0, -8)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_vmcct")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_qdivg")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+offset_right = 112.0
+offset_bottom = 88.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/PanelContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "health"
+
+[node name="healthStat" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "23434"
+
+[node name="Label3" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "attack"
+
+[node name="attackStat" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "235"
+
+[node name="Label5" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "defense"
+
+[node name="defenseStat" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "4324"
+
+[node name="Hotbar" type="MarginContainer" parent="CanvasLayer"]
+offset_left = 136.0
+offset_top = 550.0
+offset_right = 1080.0
+offset_bottom = 648.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Hotbar"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="item1" type="Label" parent="CanvasLayer/Hotbar/HBoxContainer"]
+layout_mode = 2
+text = "Unit 1"
+
+[node name="item2" type="Label" parent="CanvasLayer/Hotbar/HBoxContainer"]
+layout_mode = 2
+text = "Unit 2"
+
+[node name="item3" type="Label" parent="CanvasLayer/Hotbar/HBoxContainer"]
+layout_mode = 2
+text = "Unit 3"
+
+[node name="item4" type="Label" parent="CanvasLayer/Hotbar/HBoxContainer"]
+layout_mode = 2
+text = "Unit 4"

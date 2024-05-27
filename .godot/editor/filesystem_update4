@@ -1,2 +1,6 @@
 res://scenes/game_board.tscn
 res://scenes/CharacterBody2D.gd
+res://scripts/grid.gd
+res://scenes/statsUI.gd
+res://scenes/mainMenu.tscn
+res://scenes/mainMenu.gd

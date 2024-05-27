@@ -1,4 +1,6 @@
 extends TileMap
+@onready var unit = $"../CharacterBody2D"
+@onready var UI = $"../CanvasLayer"
 
 const gridSize = 4
 var gridDict = {}
@@ -13,6 +15,8 @@ func _input(event):
 	if event.is_action_pressed("left_click"):
 		var tile = local_to_map(adjMouseCoords())
 		currentTile = map_to_local(tile)
+		unit.moveCharacter()
+		UI.updateStats(unit.stats)
 		if get_cell_tile_data(0, tile) == null:
 			set_cell(0, tile, 2, Vector2i(0,0), 0)
 		elif get_cell_tile_data(1, tile) == null:

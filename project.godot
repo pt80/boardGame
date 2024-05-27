@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="chess"
-run/main_scene="res://scenes/game_board.tscn"
+run/main_scene="res://scenes/mainMenu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
 [autoload]
 
 GameManager="*res://scripts/game_manager.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 

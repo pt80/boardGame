@@ -1,3 +1,12 @@
+Button
+VBoxContainer
+CanvasLayer
+Label
+HBoxContainer
+MarginContainer
+GridContainer
+PanelContainer
+ColorRect
 Sprite2D
 CharacterBody2D
 TileMap
