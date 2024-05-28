@@ -5,3 +5,5 @@ res://scenes/statsUI.gd
 res://scenes/mainMenu.tscn
 res://scenes/mainMenu.gd
 res://scenes/characterSelect.tscn
+res://scenes/characterSelect.gd
+res://scripts/character_data.gd

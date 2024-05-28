@@ -1,4 +1,7 @@
+TextureButton
+Button
 Label
+Timer
 GridContainer
 TextureRect
 HBoxContainer
@@ -6,9 +9,6 @@ PanelContainer
 VBoxContainer
 CanvasLayer
 ColorRect
-Button
 MarginContainer
 Sprite2D
 CharacterBody2D
-TileMap
-Camera2D

@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.2", "Mobile")
 [autoload]
 
 GameManager="*res://scripts/game_manager.gd"
+CharacterData="*res://scripts/character_data.gd"
 
 [display]
 
