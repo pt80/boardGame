@@ -7,3 +7,4 @@ res://scenes/mainMenu.gd
 res://scenes/characterSelect.tscn
 res://scenes/characterSelect.gd
 res://scripts/character_data.gd
+res://scripts/game_manager.gd

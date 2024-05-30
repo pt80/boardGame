@@ -165,37 +165,37 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 30
 columns = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
+[node name="hpLabel" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
 layout_mode = 2
 text = "Hp:"
 
-[node name="Label2" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
+[node name="HP" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
 layout_mode = 2
 text = "123"
 
-[node name="Label3" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
+[node name="attackLabel" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
 layout_mode = 2
 text = "attack"
 
-[node name="Label4" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
+[node name="attack" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
 layout_mode = 2
 text = "123"
 
-[node name="Label5" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
+[node name="defenseLabel" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
 layout_mode = 2
 text = "def"
 
-[node name="Label6" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
+[node name="defense" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
 layout_mode = 2
 text = "1234"
 
-[node name="Label7" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
+[node name="nameLabel" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
 layout_mode = 2
-text = "mana"
+text = "name"
 
-[node name="Label8" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
+[node name="name" type="Label" parent="CanvasLayer/selectedInfo/selectedStats"]
 layout_mode = 2
-text = "123"
+text = "sara"
 
 [node name="timerLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
@@ -213,5 +213,13 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "Back"
 
+[node name="select" type="Button" parent="CanvasLayer"]
+offset_left = 496.0
+offset_top = 48.0
+offset_right = 640.0
+offset_bottom = 88.0
+text = "Select"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/select" to="." method="_on_select_pressed"]
