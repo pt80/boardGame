@@ -2,7 +2,7 @@ extends TileMap
 @onready var unit = $"../CharacterBody2D"
 @onready var UI = $"../CanvasLayer"
 
-const gridSize = 4
+const gridSize = 20
 var gridDict = {}
 var currentTile
 

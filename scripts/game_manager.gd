@@ -9,9 +9,19 @@ var teams = {
 	'team1':{},
 	'team2':{}
 }
-var team1 = {}
-var team2 = {}
+var turnOrder = []
 
 func addToTeam(team,unit):
 	team[unit['name']] = unit
 	
+
+func setTurnOrder():
+	var unitKeys = GameManager.teams['team2'].keys() + GameManager.teams['team1'].keys()
+	for i in unitKeys:
+		GameManager.turnOrder.append([i,CharacterData.units[i]['hp']])
+	GameManager.turnOrder.sort_custom(sort_ascending)
+	
+func sort_ascending(a, b):
+	if a[1] < b[1]:
+		return true
+	return false

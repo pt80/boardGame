@@ -1,10 +1,10 @@
-res://scenes/game_board.tscn
-res://scenes/CharacterBody2D.gd
-res://scripts/grid.gd
-res://scenes/statsUI.gd
-res://scenes/mainMenu.tscn
-res://scenes/mainMenu.gd
 res://scenes/characterSelect.tscn
 res://scenes/characterSelect.gd
-res://scripts/character_data.gd
+res://scenes/game_board.tscn
+res://scenes/mainMenu.tscn
+res://scenes/statsUI.gd
 res://scripts/game_manager.gd
+res://scripts/grid.gd
+res://scenes/game_board.gd
+res://scenes/CharacterBody2D.gd
+res://scenes/Camera2D.gd

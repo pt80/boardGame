@@ -12,7 +12,6 @@ const stats = {
 
 
 func moveCharacter():
-	print(tile_map.gridDict)
 	var mouseCoord = get_global_mouse_position()
 	var adjCoord = Vector2(mouseCoord.x + 12, mouseCoord.y -6)
 	if !tile_map.currentTile == null:

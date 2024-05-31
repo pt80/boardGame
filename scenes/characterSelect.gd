@@ -35,14 +35,15 @@ func _ready():
 		var image = TextureButton.new()
 		image.texture_normal = load(CharacterData.units[i]['image'])
 		character_select.add_child(image)
-		image.connect("pressed", updateSelectedUnit.bind(i))
-	
-func updateSelectedUnit(selected):
+		image.connect("pressed", updateSelectedUnit.bind(image,i))
+
+func updateSelectedUnit(button, selected):
 	selected_image.texture = load(CharacterData.units[selected]['image'])
 	hp.text = str(CharacterData.units[selected]['hp'])
 	attack.text = str(CharacterData.units[selected]['attack'])
 	defense.text = str(CharacterData.units[selected]['def'])
 	selectName.text = selected
+	button.disabled = true
 	
 func _on_timer_timeout():
 	selectionTime -= 1
@@ -52,7 +53,7 @@ func _on_timer_timeout():
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")
-
+	
 func _on_select_pressed():
 	if selectName.text != 'sara':
 		selectionTime = 30

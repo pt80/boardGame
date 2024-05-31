@@ -220,6 +220,11 @@ offset_right = 640.0
 offset_bottom = 88.0
 text = "Select"
 
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="CanvasLayer/select" to="." method="_on_select_pressed"]
