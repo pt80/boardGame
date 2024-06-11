@@ -8,3 +8,7 @@ res://scripts/grid.gd
 res://scenes/game_board.gd
 res://scenes/CharacterBody2D.gd
 res://scenes/Camera2D.gd
+res://scripts/piece.gd
+res://scenes/Ally.tscn
+res://scenes/AllyUnit.gd
+res://scenes/piece.tscn

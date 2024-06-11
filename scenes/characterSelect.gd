@@ -21,12 +21,12 @@ extends Control
 @onready var black2name = $CanvasLayer/panelRight/teamRight/unit2/unitName
 @onready var black3name = $CanvasLayer/panelRight/teamRight/unit3/unitName
 
-
 var selectedUnits = [null,null,null,null,null,null]
 var teamIcons = []
 var teamUnitNames = []
 var currentTurn = 0
 var selectionTime = 30
+
 
 func _ready():
 	teamIcons = [white1,black1,white2,black2,white3,black3]
@@ -63,9 +63,17 @@ func _on_select_pressed():
 		updateTeamIcons()
 		switchTeams()
 		currentTurn += 1
+		resetSelectedUnit()
 		if currentTurn > 5:
 			get_tree().change_scene_to_file("res://scenes/game_board.tscn")
-		
+
+func resetSelectedUnit():
+	selectName.text = 'sara'
+	hp.text = '???'
+	attack.text = '???'
+	defense.text = '???'
+	selected_image.texture = load("res://images/testUnit.png")
+
 func updateTeamIcons():
 	var counter = 0
 	for i in selectedUnits:

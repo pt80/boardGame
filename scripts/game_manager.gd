@@ -10,6 +10,7 @@ var teams = {
 	'team2':{}
 }
 var turnOrder = []
+var spawnPoints = [Vector2(0,3),Vector2(0,5),Vector2(0,7)]
 
 func addToTeam(team,unit):
 	team[unit['name']] = unit

@@ -5,11 +5,13 @@ extends TileMap
 const gridSize = 20
 var gridDict = {}
 var currentTile
+const CharacterBody2d = preload("res://scenes/piece.tscn")
 
 func _ready():
 	buildTerrain(0, Vector2i(0,0), 'ground')
 	buildTerrain(1, Vector2i(3,0), 'soil')
 	buildTerrain(2, Vector2i(2,0), 'grass')
+	addUnits()
 
 func _input(event):
 	if event.is_action_pressed("left_click"):
@@ -44,8 +46,16 @@ func adjMouseCoords():
 func buildTerrain(layer, tile, type):
 	for x in gridSize:
 		for y in gridSize:
+
 			gridDict[str(Vector2(x,y))] = {
 				"type": type,
 				"occupying_unit": ""
 			}
 			set_cell(layer, Vector2(x,y),2, tile, 0)
+
+func addUnits():
+	for i in GameManager.spawnPoints:
+		var instance = CharacterBody2d.instantiate()
+		add_child(instance)
+		instance.global_position = map_to_local(i)
+		print('spawn', GameManager.teams['team1'])
