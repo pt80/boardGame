@@ -2,15 +2,15 @@ extends TileMap
 @onready var unit = $"../CharacterBody2D"
 @onready var UI = $"../CanvasLayer"
 
-const gridSize = 20
+const gridSize = 1500000
 var gridDict = {}
 var currentTile
 const CharacterBody2d = preload("res://scenes/piece.tscn")
 
 func _ready():
 	buildTerrain(0, Vector2i(0,0), 'ground')
-	buildTerrain(1, Vector2i(3,0), 'soil')
-	buildTerrain(2, Vector2i(2,0), 'grass')
+	#buildTerrain(1, Vector2i(3,0), 'soil')
+	#buildTerrain(2, Vector2i(2,0), 'grass')
 	addUnits()
 
 func _input(event):
