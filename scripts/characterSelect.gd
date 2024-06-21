@@ -43,7 +43,7 @@ func updateSelectedUnit(button, selected):
 	attack.text = str(CharacterData.units[selected]['attack'])
 	defense.text = str(CharacterData.units[selected]['def'])
 	selectName.text = selected
-	button.disabled = true
+	#button.disabled = true
 	
 func _on_timer_timeout():
 	selectionTime -= 1

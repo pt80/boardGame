@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmafqghepc407"]
 
 [ext_resource type="Texture2D" uid="uid://bybsb2to22jbt" path="res://images/GH3SBvzacAElecm.jpg" id="1_26ryc"]
-[ext_resource type="Script" path="res://scenes/characterSelect.gd" id="1_wysl2"]
+[ext_resource type="Script" path="res://scripts/characterSelect.gd" id="1_wysl2"]
 [ext_resource type="Texture2D" uid="uid://bukp8g7xdqoa8" path="res://images/testUnit.png" id="2_3ptpw"]
 
 [node name="characterSelection" type="Control"]

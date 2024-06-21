@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=3 uid="uid://taijyu263ucn"]
 
 [ext_resource type="Texture2D" uid="uid://cclp4rdrb6m5u" path="res://images/bw.png" id="1_bnnrx"]
-[ext_resource type="Script" path="res://scenes/game_board.gd" id="1_i5wbx"]
+[ext_resource type="Script" path="res://scripts/game_board.gd" id="1_i5wbx"]
 [ext_resource type="Texture2D" uid="uid://nwtpx3bkp5lg" path="res://images/5/MCBlocksBlackOutline.png" id="2_6terr"]
 [ext_resource type="Script" path="res://scripts/grid.gd" id="2_dnxpm"]
-[ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_g010x"]
+[ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_g010x"]
 [ext_resource type="Texture2D" uid="uid://b0rrmt2xuscg8" path="res://images/5/MCBlocksColorOutline.png" id="3_yhmfb"]
-[ext_resource type="Script" path="res://scenes/CharacterBody2D.gd" id="5_hkkkc"]
+[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="5_hkkkc"]
 [ext_resource type="Texture2D" uid="uid://c3ttk0l7n600t" path="res://images/blackBishop.png" id="5_vmcct"]
-[ext_resource type="Script" path="res://scenes/statsUI.gd" id="7_qdivg"]
+[ext_resource type="Script" path="res://scripts/statsUI.gd" id="7_qdivg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bwaj"]
 texture = ExtResource("1_bnnrx")
@@ -297,6 +297,14 @@ text = "defense"
 layout_mode = 2
 text = "4324"
 
+[node name="Label6" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "defense"
+
+[node name="speedStat" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "4324"
+
 [node name="Hotbar" type="MarginContainer" parent="CanvasLayer"]
 offset_left = 136.0
 offset_top = 550.0
@@ -323,3 +331,9 @@ text = "Unit 3"
 [node name="item4" type="Label" parent="CanvasLayer/Hotbar/HBoxContainer"]
 layout_mode = 2
 text = "Unit 4"
+
+[node name="Button" type="Button" parent="CanvasLayer/Hotbar/HBoxContainer"]
+layout_mode = 2
+text = "End Turn"
+
+[connection signal="pressed" from="CanvasLayer/Hotbar/HBoxContainer/Button" to="CanvasLayer" method="_on_button_pressed"]

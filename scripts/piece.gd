@@ -1,17 +1,48 @@
 extends Node2D
 
-var tile_map = GameManager.tile_map
+var tileMap = GameManager.tileMap
 var player
 var currentCell
+@onready var sprite = $Sprite2D
+@onready var UI = $"../../CanvasLayer"
 
-func _process(delta):
-	if Input.is_action_pressed('ui_accept'):
-		var grid = tile_map.get_used_cells(0)
-		for i in grid:
-			var tile = tile_map.get_cell_tile_data(0,i)
-			print(i, tile.get_custom_data('occupied'))
+
+func _ready():
+	pass
 	
-	#if Input.is_action_pressed("click") && !GameManager.currentPiece == null:
+func setTexture(image):
+	sprite.texture = load(image)
+	
+func setStats(stats):
+	print(stats)
+
+func start(name):
+	if name in GameManager.teams['team1'].keys():
+		print('unit name is ', GameManager.teams['team1'][name])
+		UI.updateStats(GameManager.teams['team1'][name])
+	else:
+		print('unit name is ', GameManager.teams['team2'][name])
+		UI.updateStats(GameManager.teams['team2'][name])
+	
+func move():
+	tileMap.findPath(
+		Vector2(11,0),
+		tileMap.local_to_map(get_global_mouse_position())
+	)
+
+	
+func _process(delta):
+	if Input.is_action_pressed("middle_click"):
+		print(tileMap)
+		move()
+	#if Input.is_action_pressed('ui_accept'):
+		#var grid = tile_map.get_used_cells(0)
+		#for i in grid:
+			#var tile = tile_map.get_cell_tile_data(0,i)
+			#print(i, tile.get_custom_data('occupied'))
+	
+	if Input.is_action_pressed("left_click") && GameManager.currentPiece == self:
+		UI.updateStats({'health':1,'attack':2,'defense':3})
 		#GameManager.holdingPiece = true
 		#GameManager.currentPiece.global_position = get_global_mouse_position()
 #

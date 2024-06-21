@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cuqmii8kxerdr"]
 
-[ext_resource type="Script" path="res://scenes/AllyUnit.gd" id="1_gxywh"]
+[ext_resource type="Script" path="res://scripts/AllyUnit.gd" id="1_gxywh"]
 [ext_resource type="Texture2D" uid="uid://b625mo7t4klgl" path="res://images/pawn.png" id="2_n20ut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1sw2x"]
