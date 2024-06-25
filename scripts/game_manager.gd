@@ -23,6 +23,8 @@ func addToTeam(team,unit):
 	team[unit['name']]['attack'] = unit['attack']
 	team[unit['name']]['speed'] = unit['speed']
 	team[unit['name']]['name'] = unit['name']
+	team[unit['name']]['team'] = currentTurn
+	print(team[unit['name']])
 	spawnIndex += 1
 
 func setTurnOrder():

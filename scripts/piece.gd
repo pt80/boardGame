@@ -26,13 +26,13 @@ func start(name):
 	
 func move():
 	tileMap.findPath(
-		Vector2(11,0),
+		Vector2(50,50),
 		tileMap.local_to_map(get_global_mouse_position())
 	)
 
 	
 func _process(delta):
-	if Input.is_action_pressed("middle_click"):
+	if Input.is_action_pressed("right_click"):
 		print(tileMap)
 		move()
 	#if Input.is_action_pressed('ui_accept'):

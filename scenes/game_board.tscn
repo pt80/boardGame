@@ -273,7 +273,17 @@ layout_mode = 2
 layout_mode = 2
 columns = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+[node name="name" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="teamBlank" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "dfdfas
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 text = "health"
 
@@ -299,7 +309,7 @@ text = "4324"
 
 [node name="Label6" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
 layout_mode = 2
-text = "defense"
+text = "speed"
 
 [node name="speedStat" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer/GridContainer"]
 layout_mode = 2
@@ -316,9 +326,9 @@ layout_mode = 2
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="item1" type="Label" parent="CanvasLayer/Hotbar/HBoxContainer"]
+[node name="moveButton" type="Button" parent="CanvasLayer/Hotbar/HBoxContainer"]
 layout_mode = 2
-text = "Unit 1"
+text = "Move"
 
 [node name="item2" type="Label" parent="CanvasLayer/Hotbar/HBoxContainer"]
 layout_mode = 2
@@ -336,4 +346,5 @@ text = "Unit 4"
 layout_mode = 2
 text = "End Turn"
 
+[connection signal="pressed" from="CanvasLayer/Hotbar/HBoxContainer/moveButton" to="CanvasLayer" method="_on_move_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Hotbar/HBoxContainer/Button" to="CanvasLayer" method="_on_button_pressed"]

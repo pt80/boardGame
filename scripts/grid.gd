@@ -47,9 +47,11 @@ func _input(event):
 			erase_cell(0, tile)
 			#print(get_cell_tile_data(0, tile).get_custom_data('terrain'))
 		
-func findPath(start = Vector2(0,0), end = Vector2(0,10)):
+func findPath(start = Vector2(0,0), end = Vector2(50,50)):
 	var path = astarGrid.get_id_path(start,	end)
-	print(path)
+	for i in path:
+		print(i)
+		erase_cell(2, i)
 		
 func adjMouseCoords():
 	var mouseCoord = get_global_mouse_position()
