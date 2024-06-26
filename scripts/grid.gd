@@ -6,6 +6,7 @@ const gridSize = 150
 var gridDict = {}
 var currentTile
 var astarGrid
+var astarEnd
 const unitPiece = preload("res://scenes/piece.tscn")
 
 func _ready():
@@ -23,9 +24,10 @@ func setupAstar():
 	astarGrid.update()
 
 func _input(event):
-	#if event.is_action_pressed("left_click"):
-		#var tile = local_to_map(adjMouseCoords())
-		#currentTile = map_to_local(tile)
+	if event.is_action_pressed("left_click"):
+		var tile = local_to_map(adjMouseCoords())
+		print(tile)
+		currentTile = tile
 		#unit.moveCharacter()
 		#UI.updateStats(unit.stats)
 		#if get_cell_tile_data(0, tile) == null:
@@ -35,7 +37,7 @@ func _input(event):
 		#elif get_cell_tile_data(2, tile) == null:
 			#set_cell(2, tile, 2, Vector2i(0,0), 0)
 		
-	if event.is_action_pressed("right_click"):
+	if event.is_action_pressed("middle_click"):
 		var tile = local_to_map(adjMouseCoords())
 		if !get_cell_tile_data(2, tile) == null:
 			erase_cell(2, tile)
@@ -47,11 +49,14 @@ func _input(event):
 			erase_cell(0, tile)
 			#print(get_cell_tile_data(0, tile).get_custom_data('terrain'))
 		
-func findPath(start = Vector2(0,0), end = Vector2(50,50)):
+func findPath(start = Vector2(0,0), end = currentTile):
+	print('start ', start, ', end ', end)
 	var path = astarGrid.get_id_path(start,	end)
+	print('this is the path' , path[path.size()-1])
+	astarEnd = path[path.size()-1]
 	for i in path:
-		print(i)
-		erase_cell(2, i)
+		set_cell(2, i, 2, Vector2i(0,1), 0)
+		#erase_cell(2, i)
 		
 func adjMouseCoords():
 	var mouseCoord = get_global_mouse_position()

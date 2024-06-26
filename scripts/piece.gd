@@ -24,17 +24,15 @@ func start(name):
 		print('unit name is ', GameManager.teams['team2'][name])
 		UI.updateStats(GameManager.teams['team2'][name])
 	
-func move():
-	tileMap.findPath(
-		Vector2(50,50),
-		tileMap.local_to_map(get_global_mouse_position())
-	)
+func move(location):
+	tileMap.findPath(location, tileMap.local_to_map(get_global_mouse_position()))
+	position = tileMap.map_to_local(Vector2(tileMap.astarEnd[0],tileMap.astarEnd[1]))
 
 	
 func _process(delta):
 	if Input.is_action_pressed("right_click"):
 		print(tileMap)
-		move()
+		#move()
 	#if Input.is_action_pressed('ui_accept'):
 		#var grid = tile_map.get_used_cells(0)
 		#for i in grid:

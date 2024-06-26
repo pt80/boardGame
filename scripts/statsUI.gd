@@ -25,5 +25,6 @@ func _on_button_pressed():
 
 
 func _on_move_button_pressed():
-	grid.findPath(GameManager.teams[team.text][nameLabel.text]['location'], )
+	GameManager.teams[team.text][nameLabel.text]['object'].move(GameManager.teams[team.text][nameLabel.text]['location'])
+	#grid.findPath(GameManager.teams[team.text][nameLabel.text]['location'], )
 
