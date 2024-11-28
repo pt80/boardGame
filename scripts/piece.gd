@@ -3,6 +3,7 @@ extends Node2D
 var tileMap = GameManager.tileMap
 var player
 var currentCell
+var myName
 @onready var sprite = $Sprite2D
 @onready var UI = $"../../CanvasLayer"
 

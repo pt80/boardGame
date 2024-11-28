@@ -7,6 +7,7 @@ const units = {
 		'def':35,
 		'attack': 30,
 		'speed': 110,
+		'move': 1,
 		'name':'anna',
 		'location':Vector2(0,0)
 	},
@@ -17,6 +18,7 @@ const units = {
 		'attack': 30,
 		'speed': 115,
 		'name':'ally',
+		'move': 2,
 		'location':Vector2(0,0)
 	},
 	'aj':{
@@ -25,6 +27,7 @@ const units = {
 		'def':35,
 		'attack': 30,
 		'speed': 105,
+		'move': 3,
 		'name':'aj',
 		'location': Vector2(0,0)
 	},
@@ -34,6 +37,7 @@ const units = {
 		'def':35,
 		'attack': 30,
 		'speed': 112,
+		'move': 4,
 		'name':'axe',
 		'location': Vector2(0,0)
 	},
@@ -43,6 +47,7 @@ const units = {
 		'def':35,
 		'attack': 30,
 		'speed': 107,
+		'move': 5,
 		'name':'xander',
 		'location': Vector2(0,0)
 	},
@@ -52,6 +57,7 @@ const units = {
 		'def':35,
 		'attack': 30,
 		'speed': 111,
+		'move': 6,
 		'name':'cage',
 		'location': Vector2(0,0)
 	},
@@ -61,6 +67,7 @@ const units = {
 		'def':35,
 		'attack': 30,
 		'speed': 118,
+		'move': 7,
 		'name':'aaron',
 		'location': Vector2(0,0)
 	},
@@ -70,6 +77,7 @@ const units = {
 		'def':35,
 		'attack': 30,
 		'speed': 122,
+		'move': 8,
 		'name':'alexa',
 		'location': Vector2(0,0)
 	},
@@ -79,6 +87,7 @@ const units = {
 		'def':35,
 		'attack': 30,
 		'speed': 135,
+		'move': 9,
 		'name':'argo',
 		'location': Vector2(0,0)
 	}

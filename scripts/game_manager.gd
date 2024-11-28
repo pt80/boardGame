@@ -22,6 +22,7 @@ func addToTeam(team,unit):
 	team[unit['name']]['def'] = unit['def']
 	team[unit['name']]['attack'] = unit['attack']
 	team[unit['name']]['speed'] = unit['speed']
+	team[unit['name']]['move'] = unit['move']
 	team[unit['name']]['name'] = unit['name']
 	team[unit['name']]['team'] = currentTurn
 	print(team[unit['name']])

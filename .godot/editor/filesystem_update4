@@ -2,8 +2,4 @@ res://scenes/game_board.tscn
 res://scenes/mainMenu.tscn
 res://scenes/characterSelect.tscn
 res://scenes/piece.tscn
-res://scripts/statsUI.gd
-res://scripts/game_board.gd
-res://scripts/game_manager.gd
 res://scripts/grid.gd
-res://scripts/piece.gd

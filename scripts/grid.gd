@@ -30,12 +30,12 @@ func _input(event):
 		currentTile = tile
 		#unit.moveCharacter()
 		#UI.updateStats(unit.stats)
-		#if get_cell_tile_data(0, tile) == null:
-			#set_cell(0, tile, 2, Vector2i(0,0), 0)
-		#elif get_cell_tile_data(1, tile) == null:
-			#set_cell(1, tile, 2, Vector2i(0,0), 0)
-		#elif get_cell_tile_data(2, tile) == null:
-			#set_cell(2, tile, 2, Vector2i(0,0), 0)
+		if get_cell_tile_data(0, tile) == null:
+			set_cell(0, tile, 2, Vector2i(0,0), 0)
+		elif get_cell_tile_data(1, tile) == null:
+			set_cell(1, tile, 2, Vector2i(0,0), 0)
+		elif get_cell_tile_data(2, tile) == null:
+			set_cell(2, tile, 2, Vector2i(0,0), 0)
 		
 	if event.is_action_pressed("middle_click"):
 		var tile = local_to_map(adjMouseCoords())
@@ -53,6 +53,7 @@ func findPath(start = Vector2(0,0), end = currentTile):
 	print('start ', start, ', end ', end)
 	var path = astarGrid.get_id_path(start,	end)
 	print('this is the path' , path[path.size()-1])
+	path = path.slice(0,5)
 	astarEnd = path[path.size()-1]
 	for i in path:
 		set_cell(2, i, 2, Vector2i(0,1), 0)
@@ -79,6 +80,8 @@ func addUnits():
 		instance.setStats(GameManager.teams['team1'][i])
 		instance.setTexture(CharacterData.units[i]['image'])
 		instance.global_position = map_to_local(GameManager.teams['team1'][i]['location'])
+		instance.myName = i
+		print('my name is ' , instance.myName)
 	for i in GameManager.teams['team2'].keys():
 		var instance = unitPiece.instantiate()
 		add_child(instance)
@@ -86,4 +89,5 @@ func addUnits():
 		GameManager.teams['team2'][i]['object'] = instance
 		instance.setStats(GameManager.teams['team2'][i])
 		instance.global_position = map_to_local(GameManager.teams['team2'][i]['location'])
-
+		instance.myName = i
+		print('my name is ' , instance.myName)
